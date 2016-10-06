@@ -80,3 +80,19 @@
 		
 		</form>
 		
+<h2>Arhiiv</h2>
+<?php
+
+	//iga liikme kohta massiivis
+	foreach ($notes as $n) {
+		
+		$style = "float:left; width:150px; min-height:200px; border: 1px solid gray; background-color:".$n->noteColor.";";
+		echo"<p style='".$style."'>".$n->note."</p>";
+		
+	}
+
+
+
+
+
+?>
