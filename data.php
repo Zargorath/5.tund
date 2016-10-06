@@ -86,13 +86,34 @@
 	//iga liikme kohta massiivis
 	foreach ($notes as $n) {
 		
-		$style = "float:left; width:150px; min-height:200px; border: 1px solid gray; background-color:".$n->noteColor.";";
+		$style = "width:150px; min-height:200px; border: 1px solid gray; background-color:".$n->noteColor.";";
 		echo"<p style='".$style."'>".$n->note."</p>";
 		
 	}
 
+?>
 
+<h2 style="clear:both;">Tabel</h2>
+<?php
+	
+	$html = "<table>";
+		
+		$html .= "<tr>";
+			$html .= "<th>id</th>";
+			$html .= "<th>Märkus</th>";
+			$html .= "<th>Värv</th>";
+		$html .= "</tr>";
+	
+	foreach ($notes as $note) {
+		$html .= "<tr>";
+			$html .= "<td>".$note->id."</td>";
+			$html .= "<td>".$note->note."</td>";
+			$html .= "<td>".$note->noteColor."</td>";
+		$html .= "</tr>";
+	}
 
-
+	$html .= "</table>";
+	
+	echo $html;
 
 ?>
