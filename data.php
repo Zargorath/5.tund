@@ -48,7 +48,11 @@
 		
 	}
 	
+	$notes = getAllNotes();
 
+	echo "<pre>";
+	var_dump($notes[1]->noteColor);
+	echo "</pre>";
 ?>
 
 <h1>Data</h1>
